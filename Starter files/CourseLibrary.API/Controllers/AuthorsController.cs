@@ -23,7 +23,8 @@ public class AuthorsController : ControllerBase
             throw new ArgumentNullException(nameof(mapper));
     }
 
-    [HttpGet()] 
+    [HttpGet()]
+    [HttpHead]//returning a response without body
     public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAuthors()
     { 
         //throw new NotImplementedException();
